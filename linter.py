@@ -1,21 +1,13 @@
-#
-# linter.py
-# Linter for CudaLint
-#
-# Original: by Aparajita Fishman
 # Copyright (c) 2013 Aparajita Fishman
-# Change: Alexey T. (CudaText)
-#
 # License: MIT
-#
-
-"""This module exports the CSSLint plugin linter class."""
+# Change for CudaLint: Alexey T.
 
 import os
-from SublimeLinter.lint import Linter, util
+from cuda_lint import Linter, util
 
 _node = 'node' if os.name=='nt' else 'nodejs'
 _js = os.path.join(os.path.dirname(__file__), 'node_modules', 'csslint', 'cli.js')
+
 
 class CSSLint(Linter):
     """Provides an interface to the csslint."""
