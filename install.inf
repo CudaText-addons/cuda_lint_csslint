@@ -3,3 +3,4 @@ title=Linter for CSS, using csslint
 desc=Linter for CudaLint, adds support for CSS lexer, using csslint, requires Node.js
 type=cudatext-plugin
 subdir=cuda_lint_csslint
+homepage=https://github.com/CudaText-addons/cuda_lint_csslint
