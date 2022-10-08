@@ -1,0 +1,4 @@
+
+2022.10.08
+* changed: removed Node module from plugin, user must install it, see readme.txt
++ add: reused cudax_nodejs module

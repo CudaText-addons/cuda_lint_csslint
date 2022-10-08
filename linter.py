@@ -4,16 +4,15 @@
 
 import os
 from cuda_lint import Linter, util
+from cudax_nodejs import NODE_FILE
 
-_node = 'node' if os.name=='nt' else 'nodejs'
-_js = os.path.join(os.path.dirname(__file__), 'node_modules', 'csslint', 'cli.js')
-
+_js = os.path.join(os.path.dirname(__file__), 'node_modules', 'csslint', 'dist', 'cli.js')
 
 class CSSLint(Linter):
     """Provides an interface to the csslint."""
 
     syntax = 'CSS'
-    cmd = (_node, _js, '--format=compact')
+    cmd = (NODE_FILE, _js, '--format=compact')
     regex = r'''(?xi)
         ^.+:\s*   # filename
 
