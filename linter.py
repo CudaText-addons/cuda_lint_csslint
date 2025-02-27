@@ -6,7 +6,10 @@ import os
 from cuda_lint import Linter, util
 from cudax_nodejs import NODE_FILE
 
-_js = os.path.join(os.path.dirname(__file__), 'node_modules', 'csslint', 'dist', 'cli.js')
+import cudatext as app
+_js = os.path.join(os.path.expanduser('~'), 'node_modules', 'csslint', 'dist', 'cli.js')
+if not os.path.exists(_js):
+    app.msg_box('CSSLint linter cannot find file:\n'+_js, app.MB_OK+app.MB_ICONERROR)
 
 class CSSLint(Linter):
     """Provides an interface to the csslint."""
