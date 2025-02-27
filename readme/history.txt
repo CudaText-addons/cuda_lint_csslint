@@ -1,4 +1,6 @@
+2025.02.27
+* change: JS file is now searched in the ~/node_modules/csslint/dist/cli.js
 
 2022.10.08
-* changed: removed Node module from plugin, user must install it, see readme.txt
+* change: removed Node module from plugin, user must install it, see readme.txt
 + add: reused cudax_nodejs module
